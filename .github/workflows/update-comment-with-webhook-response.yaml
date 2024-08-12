@@ -16,7 +16,7 @@ jobs:
       id: trigger_webhook
       run: |
         # Replace this URL with your actual webhook URL
-        WEBHOOK_URL="https://k8s0623426-node1.thunder.devsnc.com/api/snc/test_api"
+        WEBHOOK_URL="https://test-server-jzh8iv3sh-emmyaris-projects.vercel.app/api"
         COOKIE="JSESSIONID=635BEA21E9EF04616134E7C64444B54C; glide_node_id_for_js=2729d31b698a76c9eeea7ce6af66c87e8c10cf01978362f14141f6cb3b41c8da; glide_user_route=glide.f42cc9703de7303a619d6b47ab989a15"
         
         RESPONSE=$(curl -v -s -X POST $WEBHOOK_URL  -b "$COOKIE" -H "Content-Type: application/json")
