@@ -17,7 +17,7 @@ jobs:
       run: |
         # Replace this URL with your actual webhook URL
         WEBHOOK_URL="https://k8s0623426-node1.thunder.devsnc.com/api/snc/test_api"
-        RESPONSE=$(curl -s -X POST $WEBHOOK_URL -H "Content-Type: application/json" -d @payload.json)
+        RESPONSE=$(curl -s -X POST $WEBHOOK_URL -H "Content-Type: application/json")
         
         # Capture the message from the response
         echo "response=$RESPONSE" >> $GITHUB_ENV
