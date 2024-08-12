@@ -19,10 +19,6 @@ jobs:
         WEBHOOK_URL="https://k8s0623426-node1.thunder.devsnc.com/api/snc/test_api"
         RESPONSE=$(curl -s -X POST $WEBHOOK_URL -H "Content-Type: application/json")
         
-        # Capture the message from the response
-        echo "response=$RESPONSE" >> $GITHUB_ENV
-        echo "Webhook response: $RESPONSE"
-
     - name: Post Comment on Pull Request
       if: ${{ success() }} # Only run if the previous step was successful
       uses: actions/github-script@v6
